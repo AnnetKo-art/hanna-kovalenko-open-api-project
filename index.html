@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Open API Project</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-    <h1>My Open API Project</h1>
-     <button id="getWeather">Get Weather</button>
+    <div class="header-container">
+        <div class="header-left">
+            <h1>My Open API Project</h1>
+            <button id="getWeather">Get Weather</button>          
+            <p id="buttonClick">Click the button to load weather data.</p>
+    
+        </div>
 
-    <section id="weatherDisplay">
-        <p>Click the button to load weather data.</p>
+        <img src="css/weatherForecast.jpg" alt="Weather Image" class="header-image">
+    </div>
+
+<!--placeholder in the HTML to hold weather data that will be loaded dynamically with JavaScript when the user clicks the “Get Weather” button.-->
+    <section id="weatherDisplay">       
     </section>
 
     
 
     <!-- Connect JavaScript file -->
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
