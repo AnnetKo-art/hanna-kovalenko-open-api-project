@@ -1,6 +1,7 @@
 body{
     background-color: bisque;
     font-size: 1.6rem;
+    padding-bottom: 100px;
 }
 
 /* Title, image, button styling */
@@ -9,6 +10,7 @@ body{
   justify-content: flex-start;
   align-items: center; /* vertically align if needed */
   margin-top:1em;
+  margin-left:1em;
   gap: 8em; /* space between items */
 }
 
@@ -56,3 +58,116 @@ h1,h2, #buttonClick {
   gap: 20px;
   padding: 20px;
 }
+
+/* DROPDOWN MENU STYLE */
+
+label{
+    font-size: 2rem;
+    font-weight:700;
+    color:blue;
+   
+}
+
+select{
+    color:rgb(34, 32, 32);
+    background-color: #f1ecec;
+    font-size:1.2rem;
+    font-weight:400;
+    width: 20%;
+    min-width: 200px;
+    border: 3px solid blue;
+
+}
+
+/* ===== MOBILE MEDIA QUERY (max-width: 600px) ====== */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 1.4rem;
+        padding-bottom: 60px;
+        overflow-x: hidden; /* prevent horizontal scroll */
+    }
+
+    h1{
+        color:brown;
+    }
+    h2{
+        color: darkslategray;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+        margin-left: 0;        /* remove the left push */
+        margin-right: 0;
+        padding: 0 1em;        /* use padding instead for breathing room on both sides */
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .header-image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Also fix weatherDisplay which has margin-left: 1em */
+    #weatherDisplay {
+        margin-left: 0;
+        padding: 0 1em;
+    }
+
+    #forecastContainer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    select {
+        width: 100%;
+        min-width: unset;
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    #getWeather, #forecastBtn {
+        font-size: 1.3rem;
+        width: 100%;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+}
+
+/* ===== TABLET MEDIA QUERY (601px - 900px) ====*/
+@media (min-width: 601px) and (max-width: 900px) {
+    h1{
+        font-size:1.9rem;
+        color:blue;
+    }
+    h2{
+        font-size:1.7rem;
+        color:brown;
+    }
+
+    .header-container {
+        margin-left: 0;
+        padding: 0 1.5em;
+        gap: 2em;                /* reduce the big gap between title and image */
+    }
+
+    .header-image {
+        width: 100%;
+        max-width: 300px;        /* stops the image from pushing out of bounds */
+    }
+
+    #forecastContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+  
