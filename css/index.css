@@ -1,0 +1,58 @@
+body{
+    background-color: bisque;
+    font-size: 1.6rem;
+}
+
+/* Title, image, button styling */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* vertically align if needed */
+  margin-top:1em;
+  gap: 8em; /* space between items */
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-image {
+    width: 40rem; /* about 320px */
+    height: auto;
+}
+
+
+h1,h2, #buttonClick {
+    color:blueviolet;
+}
+
+#weatherDisplay{
+    color:blueviolet;
+    margin-left:1em ;
+    font-weight: 400px;
+
+}
+
+/*Buttons Styling */
+
+#getWeather, #forecastBtn{
+    font-size:1.4rem;
+    border-radius: 8px;
+    border-color: rgb(0, 183, 255);
+    transition: background-color 0.3s ease;
+}
+
+
+#getWeather:hover,#forecastBtn:hover {
+  background-color: rgb(210, 238, 246); /* Color changes on hover */
+}
+
+/* 7 day weather forecast display */
+
+#forecastContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
